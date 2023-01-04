@@ -1,0 +1,449 @@
+.creeperBase {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.creeper {
+    position: absolute;
+    width: 80px;
+    height: 240px;
+}
+.creeperFace {
+    position: absolute;
+    bottom: 185px;
+    left: 10px;
+}
+#debugButton {
+    position: absolute;
+    top: 500px;
+    left: 10px;
+}
+#versionText {
+    color: #dfdfdf;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+#titleText {
+    font-size: 30px;
+}
+#underText {
+    font-size: 15px;
+}
+html {
+    overflow: hidden;
+}
+@font-face {
+    font-family: Comic-Sans;
+    src: url("assets/comic.ttf");
+}
+@font-face {
+    font-family: Pixel;
+    src: url("assets/Minecraft.ttf");
+}
+.ladder {
+    position: absolute;
+    width: 80px;
+    overflow: hidden;
+}
+.ladderImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#ladder1 {
+    height: 480px;
+}
+#fullScreenOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#characterInventory {
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 500px;
+    height: 750px;
+    position: absolute;
+    font-family: Comic-Sans;
+    background-color: rgba(63, 127, 255, 0.5);
+    display: none;
+}
+#inventorySpan {
+    font-size: 40px;
+    width: 750px;
+    position: absolute;
+    left: 100px;
+}
+#inventoryList {
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    top: 205px;
+    left: 20px;
+    border: 5px solid black;
+    background-color: #7f7f7f;
+    overflow-x: hidden;
+    overflow-y: scroll
+}
+#moneySpan {
+    font-size: 30px;
+    text-align: right;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+#standInventory {
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 500px;
+    height: 750px;
+    position: absolute;
+    font-family: Comic-Sans;
+    background-color: rgba(63, 127, 255, 0.5);
+    display: none;
+}
+#standInventorySpan {
+    font-size: 40px;
+    width: 750px;
+    position: absolute;
+    left: 100px;
+}
+#standInventoryList {
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    top: 205px;
+    left: 20px;
+    border: 5px solid black;
+    background-color: #7f7f7f;
+    overflow-x: hidden;
+    overflow-y: scroll
+}
+.inventoryitem {
+    width: 450px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 5px solid black;
+    overflow-x: hidden;
+    color: black;
+    user-select: none;
+}
+.inventoryitem:hover {
+    color: white;
+}
+.inventoryimg {
+    position: relative;
+    top: 18px;
+    left: 18px;
+}
+.inventoryname {
+    font-size: 30px;
+    position: relative;
+    left: 30px;
+}
+.inventoryamount {
+    font-size: 20px;
+    text-align: right;
+    position: relative;
+    left: 30px;
+    bottom: 20px;
+}
+.stand {
+    position: absolute;
+    filter: none;
+    z-index: 100;
+}
+.standImg {
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+.stand:hover {
+    filter: drop-shadow(0px 0px 10px black);
+}
+.standtoptext {
+    font-family: Comic-Sans;
+    position: absolute;
+    font-size: 30px;
+    top: 10px;
+    left: 0;
+    width: 300px;
+    text-align: center;
+}
+.standbottomtext {
+    font-family: Comic-Sans;
+    position: absolute;
+    font-size: 30px;
+    top: 200px;
+    left: 0;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+}
+#increaseBuyButton {
+    filter: none;
+    position: absolute;
+}
+#increaseBuyButton:hover {
+    filter: drop-shadow(0px 0px 10px #000);
+}
+#decreaseBuyButton {
+    filter: none;
+    position: absolute;
+    top: 100px;
+}
+#decreaseBuyButton:hover {
+    filter: drop-shadow(0px 0px 10px #000);
+}
+#buyAmountInput {
+    border: 2px solid rgba(63, 127, 255, 0.75);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    width: 58px;
+    height: 32px;
+    font-size: 25px;
+    position: absolute;
+    top: 62px;
+    text-align: center;
+    font-family: Comic-Sans;
+}
+#buyOptions {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+}
+#purchaseInformation {
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 58px;
+    text-align: right;
+}
+#itemImg {
+    position: absolute;
+    border: 2px solid rgba(63, 127, 255, 0.75);
+    background-color: rgba(0, 0, 0, 0);
+    top: 45px;
+    right: 300px;
+}
+#currentMoneyDiv {
+    width: 200px;
+    height: 100px;
+    border: 5px solid black;
+    border-left: none;
+    border-radius: 0px 20px 20px 0px;
+    font-family: Comic-Sans;
+    text-align: center;
+    position: relative;
+    bottom: 5px;
+    left: 505px;
+    background: linear-gradient(0deg, rgba(63, 255, 63, 0.5) 0%, rgba(63, 255, 63, 0) 100%);
+}
+#moneyDivGap {
+    position: relative;
+    width: 20px;
+    height: 5px;
+    border-top: 5px solid black;
+    left: 485px;
+    bottom: 115px;
+}
+#currentMoneySpan {
+    font-size: 30px;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+#buyButton {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    font-family: Comic-Sans;
+    font-size: 25px;
+    border: 5px solid #2fbf2f;
+    background-color: #3fff3f;
+    color: black;
+    border-radius: 20px;
+    right: 175px;
+    top: 55px;
+    filter: none;
+}
+#buyButton:hover {
+    filter: drop-shadow(0px 0px 10px #000);
+}
+#characterMoneySpan {
+    font-size: 30px;
+    position: absolute;
+    top: 250px;
+    right: 10px;
+    font-family: Comic-Sans;
+    text-align: right;
+}
+#characterHUD {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#characterHeldItem {
+    position: absolute;
+}
+#selectedHoldingItem {
+    position: absolute;
+    border: 2px solid rgba(63, 127, 255, 0.75);
+    top: 110px;
+    right: 10px;
+}
+#blockPlacementGuide {
+    background-color: rgba(0, 0, 0, 0);
+    border: 5px dashed black;
+    position: absolute;
+    display: none;
+}
+#invisibleMouseDetector {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0);
+}
+#characterStandSquare {
+    width: 300px;
+    height: 240px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+}
+#bpgHitbox {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+}
+.fan {
+    position: absolute;
+    width: 300px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.fanBase {
+    position: absolute;
+    width: 300px;
+    height: 20px;
+    top: 0;
+    left: 0;
+}
+.fanBlade {
+    position: absolute;
+    width: 284px;
+    height: 4px;
+    top: 8px;
+    left: 8px;
+}
+.decorDot {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+}
+#creeperCodeInput {
+    position: absolute;
+    right: 10px;
+    z-index: 110;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    resize: none;
+}
+#runButton {
+    position: absolute;
+    z-index: 111;
+    background-color: #3f7fff;
+    color: black;
+    width: 100px;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 5px 0px 20px 0px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: none;
+    border-right: none;
+    right: 12px;
+    top: 219px;
+}
+#runButton:hover {
+    background-color: #7f007f;
+}
+#gamePausedSpan {
+    font-size: 30px;
+    font-family: Comic-Sans;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+.settingsIcon {
+    width: 196px;
+    height: 46px;
+    text-align: center;
+    font-family: Comic-Sans;
+    font-size: 30px;
+    background-color: rgba(0, 127, 127, 0.5);
+    border: 2px solid black;
+    position: absolute;
+    left: 250px;
+    top: 10px;
+}
+.settingsOption {
+    width: 196px;
+    height: 46px;
+    text-align: center;
+    font-family: Comic-Sans;
+    background-color: rgba(0, 127, 127, 0.5);
+    border: 2px solid black;
+    font-size: 16px;
+}
+.settingsOption:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.settingsIcon:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.settingsSection {
+    position: absolute;
+}
+#displaySettings {
+    top: 60px;
+    left: 250px;
+}
+#pauseMenu {
+    display: none;
+    z-index: 1000;
+}
+#pauseOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#invalidCodeDetector {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #f00;
+    text-align: center;
+    width: 700px;
+    height: 25px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 112;
+    display: none;
+}
